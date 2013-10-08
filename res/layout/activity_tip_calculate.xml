@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipCalculateActivity" >
+
+    <Button
+        android:id="@+id/percent15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="calculateTip"
+        android:text="@string/percent_15" />
+
+    <EditText
+        android:id="@+id/etTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/percent15"
+        android:layout_alignRight="@+id/percent20"
+        android:layout_below="@+id/percent10"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etEnteredAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/percent20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etTipAmount"
+        android:layout_toRightOf="@+id/percent15"
+        android:onClick="calculateTip"
+        android:text="@string/percent_20" />
+
+    <Button
+        android:id="@+id/percent10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/percent15"
+        android:onClick="calculateTip"
+        android:text="@string/percent_10" />
+
+    <TextView
+        android:id="@+id/tipIs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etTipAmount"
+        android:layout_toLeftOf="@+id/etTipAmount"
+        android:text="@string/tip_is"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
